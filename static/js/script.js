@@ -31,8 +31,6 @@ $( document ).ready(function() {
                 " (e.g.: xooxoxoxox) and an integer larger than 1 but not larger than the total" +
                 " number of pancakes on the given row");
         }
-
-        e.preventDefault();
         });
 
     $("#close").click( function(){
