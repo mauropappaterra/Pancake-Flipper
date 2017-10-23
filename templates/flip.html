@@ -1,0 +1,44 @@
+<!-- module3
+     delete.html
+     Created by Mauro J. Pappaterra on 22 of October 2017. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Metadata-->
+        <title>Pancake Flipper</title>
+        <meta name="Description goes here" content="">
+        <meta name="Mauro José Pappaterra" content="tags go here">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../static/img/favicon.png">
+
+    </head>
+    <body>
+        <!-- Your starts ends here -->
+        <h1> Your Pancakes are ready! </h1>
+
+        <img src= "../static/img/pancakes.png" width="500px">
+
+        <h2>Row: {{ row }}  K: {{ k }} </h2>
+
+        <h2>Minimum number of flips: {{ result }} </h2>
+
+        <h2>Step by step solution: </h2>
+        <h3>{{ stepByStep|linebreaksbr}}</h3>
+
+        <button type="submit" id="close"> Close </button>
+
+        <!-- Your code ends here -->
+
+        <!-- External Scripts -->
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Scripts -->
+        <script src="../static/js/script.js" type="text/javascript"></script>
+
+    </body>
+</html>
