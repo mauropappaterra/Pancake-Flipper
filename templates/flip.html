@@ -27,7 +27,10 @@
         <h2>Minimum number of flips: {{ result }} </h2>
 
         <h2>Step by step solution: </h2>
+        {% autoescape off %}
+
         <h3>{{ stepByStep|linebreaksbr}}</h3>
+        {% endautoescape %}
 
         <button type="submit" id="close"> Close </button>
 

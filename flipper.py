@@ -18,7 +18,7 @@ def pancakeFlipper(row, k):
     flips = 0;
     impossible = False
 
-    stepByStep = " Start:  " + str(row)+ "\n"
+    stepByStep = " Start:   " + str(row)+ "\n"
 
     for index, pancake in enumerate (row):
         if ((pancake != X) and (endList - index >= 0)):
@@ -58,6 +58,8 @@ def pancakeFlipper(row, k):
         stepByStep = stepByStep.replace(',','')
         stepByStep = stepByStep.replace('\'','')
         #stepByStep = stepByStep.replace('\n','<br>')
+        stepByStep = stepByStep.replace('x', '<img src= "../static/img/happy.png" alt="x" width="30px">')
+        stepByStep = stepByStep.replace('o', '<img src= "../static/img/plain.png" alt="o" width="30px">')
 
         return (str(flips), stepByStep)
     else:
@@ -72,5 +74,5 @@ def flip (char):
         return O
 
 # FOR TESTING ONLY
-#print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0])
-#print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1])
+# print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0])
+# print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1])

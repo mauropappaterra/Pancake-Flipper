@@ -33,6 +33,8 @@ $( document ).ready(function() {
         }
         });
 
+    var s = document.getElementsByClassName("example").replace(/\x/g, 'w');
+
     $("#close").click( function(){
             window.close();
         });
