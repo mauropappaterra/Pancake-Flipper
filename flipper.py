@@ -3,13 +3,13 @@
 # Created by Mauro J. Pappaterra on 29 of September 2017.
 
 
-happy = 'x'
-sad = 'o'
+X = 'x'
+O = 'o'
 
 def pancakeFlipper(row, k):
     """Receives a row of pancakes as a string and a number of simultaneous flips k
     returns a string with the number of flips to have all pancakes smiley
-    side up or a message if there is on solution
+    side up or a message if there is on solution and a string with a step by step solution
     e.g. '---+-++-' 3 => 3
     e.g. '+++++' 4 => 0
     e.g. '-+-+-' 4 => IMPOSSIBLE"""
@@ -20,8 +20,8 @@ def pancakeFlipper(row, k):
 
     stepByStep = " Start:  " + str(row)+ "\n"
 
-    for index, x in enumerate (row):
-        if ((x != happy) and (endList - index >= 0)):
+    for index, pancake in enumerate (row):
+        if ((pancake != X) and (endList - index >= 0)):
             aux = 0
 
             while (aux < k): # flips k pancakes to the right
@@ -32,7 +32,7 @@ def pancakeFlipper(row, k):
 
             stepByStep += "Flip " + str(flips) + ":  " + str(row)+ "\n"
 
-        elif ((x != happy) and (endList - index < 0) and (endList > 1)): # negative index for out of bounds
+        elif ((pancake != X) and (endList - index < 0) and (endList > 1)): # negative index for out of bounds
             aux = 0
 
             while (aux < k):  # flips k pancakes to the left
@@ -40,16 +40,15 @@ def pancakeFlipper(row, k):
                 aux += 1
 
             flips += 1
-            #FOR TESTING ONLY
             stepByStep += "Flip " + str(flips) + ":  " + str(row) + "\n"
 
         else:
-            if (x != happy):
+            if (pancake != X):
                 impossible = True
                 stepByStep = "There is no solution for this layout"
 
-    for x in row:
-        if (x != happy):
+    for pancake in row:
+        if (pancake != X):
             impossible = True
             stepByStep = "There is no solution for this layout"
 
@@ -67,10 +66,11 @@ def pancakeFlipper(row, k):
 
 def flip (char):
     "Toggles + to - and - to +"
-    if (char == sad):
-        return happy
-    elif (char == happy):
-        return sad
+    if (char == O):
+        return X
+    elif (char == X):
+        return O
 
+# FOR TESTING ONLY
 #print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0])
 #print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1])
