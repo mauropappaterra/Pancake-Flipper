@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
     $("#button").click( function(){
 
-        var row = $("#row").val();
+        var row = $("#row").val().toLowerCase();
         var pancakes = row.length
         var k = $("#k").val();
         var flag = true;
