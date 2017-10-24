@@ -66,12 +66,12 @@ def pancakeFlipper(row, k):
 
 
 def flip (char):
-    "Toggles + to - and - to +"
+    "Toggles X to O and O to X"
     if (char == O):
         return X
     elif (char == X):
         return O
 
 # FOR TESTING ONLY
-# print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0])
-# print (pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1])
+# print (pancakeFlipper(['+','+','-','+','+','-','+','+','+'],3)[0])
+# print (pancakeFlipper(['+','+','-','+','+','-','+','+','+'],3)[1])

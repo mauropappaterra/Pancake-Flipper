@@ -9,7 +9,6 @@ def index (request):
 
 def flip (request, string):
 
-    #string_list = string.split(',')
     row = ''
     k = ''
 
@@ -24,9 +23,10 @@ def flip (request, string):
     row = row.replace('x', '+')
     row = row.replace('o', '-')
 
+    #FOR TESTING ONLY
     #print (row)
-    #result = flipper.pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0]
-    #stepByStep = flipper.pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1]
+    #result = flipper.pancakeFlipper(['+','+','-','+','+','-','+','+','+'],3)[0]
+    #stepByStep = flipper.pancakeFlipper(['+','+','-','+','+','-','+','+','+'],3)[1]
     result = flipper.pancakeFlipper(list(row),k)[0]
     stepByStep = flipper.pancakeFlipper(list(row),k)[1]
 
