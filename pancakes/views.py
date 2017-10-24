@@ -21,7 +21,10 @@ def flip (request, string):
 
     k = int(k)
 
-    print (row)
+    row = row.replace('x', '+')
+    row = row.replace('o', '-')
+
+    #print (row)
     #result = flipper.pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[0]
     #stepByStep = flipper.pancakeFlipper(['x','x','o','x','x','o','x','x','x'],3)[1]
     result = flipper.pancakeFlipper(list(row),k)[0]

@@ -2,9 +2,8 @@
 # flipper.py
 # Created by Mauro J. Pappaterra on 29 of September 2017.
 
-
-X = 'x'
-O = 'o'
+X = '+'
+O = '-'
 
 def pancakeFlipper(row, k):
     """Receives a row of pancakes as a string and a number of simultaneous flips k
@@ -58,8 +57,8 @@ def pancakeFlipper(row, k):
         stepByStep = stepByStep.replace(',','')
         stepByStep = stepByStep.replace('\'','')
         #stepByStep = stepByStep.replace('\n','<br>')
-        stepByStep = stepByStep.replace('x', '<img src= "../static/img/happy.png" alt="x" width="30px">')
-        stepByStep = stepByStep.replace('o', '<img src= "../static/img/plain.png" alt="o" width="30px">')
+        stepByStep = stepByStep.replace(X, '<img src= "../static/img/happy.png" alt="+" width="30px">')
+        stepByStep = stepByStep.replace(O, '<img src= "../static/img/plain.png" alt="-" width="30px">')
 
         return (str(flips), stepByStep)
     else:
