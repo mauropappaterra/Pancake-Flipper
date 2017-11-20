@@ -7,8 +7,8 @@ O = '-'
 
 def pancakeFlipper(row, k):
     """Receives a row of pancakes as a string and a number of simultaneous flips k
-    returns a string with the number of flips to have all pancakes smiley
-    side up or a message if there is on solution and a string with a step by step solution
+    returns a tuple with a string with the number of flips to have all pancakes smiley
+    side up or a message if there is no solution, and a string with a step by step solution
     e.g. '---+-++-' 3 => 3
     e.g. '+++++' 4 => 0
     e.g. '-+-+-' 4 => IMPOSSIBLE"""
@@ -56,7 +56,7 @@ def pancakeFlipper(row, k):
         stepByStep = stepByStep.replace(']',' ')
         stepByStep = stepByStep.replace(',','')
         stepByStep = stepByStep.replace('\'','')
-        #stepByStep = stepByStep.replace('\n','<br>')
+
         stepByStep = stepByStep.replace(X, '<img src= "../static/img/happy.png" alt="+" width="30px">')
         stepByStep = stepByStep.replace(O, '<img src= "../static/img/plain.png" alt="-" width="30px">')
 
